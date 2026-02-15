@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Sono", sans-serif;
+      }
+      .subscriptiondiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .subscriptionbox{
+        flex: 1;
+        max-width: 400px;
+        text-align: center;
+        margin: 10px;
+        padding: 20px;
+        background: linear-gradient(#c9c2cd,#e03134);
+        border-radius: 5%;
+      }
+      
+      .plan-features{
+        list-style: none;
+        margin: 10%;
+        text-align: center;
+      }
+
+      .subscriptionbox .plan-button{
+        margin-bottom: 10px;
+        background-color: black;
+        color: aliceblue;
+        padding: 10px;
+        border: none;
+        border-radius: 10%; 
+      }
+
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        .subscriptiondiv{
+          flex-direction: column;
+          height: 100%;  /* Height is 100% because when in 1250px screen size the caontsainer was being displayed as a column along with its items, so the screen tried to maintain the screensize hence to minimize the scrolling by default skipped some items shrinking height by its own which in turn deletes some items or makes them unable to pop on screen. When Height is Maintained at 100% it simply tells that the original height that ought to be displayed, be displayed without shrinking anything and enabling every content to pop up on screen.*/ 
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="subscriptiondiv">
+
+      <div class="subscriptionbox">
+        <div class="plan-title"><h3>Basic</h3></div>
+        <div class="plan-price"><h1>$9.99/month</h1></div>
+        <ul class="plan-features">
+          <li>✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li>🚫 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+
+      <div class="subscriptionbox">
+        <div class="plan-title"><h3>Standard</h3></div>
+        <div class="plan-price"><h1>$19.99/month</h1></div>
+        <ul class="plan-features">
+          <li>✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li>✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+
+      <div class="subscriptionbox">
+        <div class="plan-title"><h3>Premium</h3></div>
+        <div class="plan-price"><h1>$49.99/month</h1></div>
+        <ul class="plan-features">
+          <li>✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li>✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>
